@@ -19,11 +19,9 @@ func NewConfigWith(connectionUrl string, dbName string, collection string) Confi
 
 // New returns a new configured mongodb provider
 func New(cfg Config) (*Provider, error) {
-	serverAPIOptions := options.ServerAPI(options.ServerAPIVersion1)
 
 	clientOptions := options.Client().
-		ApplyURI(cfg.ConnectionUrl).
-		SetServerAPIOptions(serverAPIOptions)
+		ApplyURI(cfg.ConnectionUrl)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
