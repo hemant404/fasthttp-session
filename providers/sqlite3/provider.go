@@ -3,7 +3,7 @@ package sqlite3
 import (
 	"fmt"
 
-	"github.com/fasthttp/session/v2/internal/sql"
+	"github.com/hemant404/fasthttp-session/internal/sql"
 
 	// Import sqlite3 driver
 	_ "github.com/mattn/go-sqlite3"
